@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+{% extends "basic_app/base.html"%}
+{% load static %}
+  {% block body_block %}
+  <link rel="stylesheet" href="{% static "css/mystyle.css"%}"/>
+    <h1>Welcome</h1>
+    <h2>Description about the project</h2>
+    <h4>Agriculture is an expensive and widly wasteful industry.It requores a lot of manpower and management. On top of this requires a lot of man power and management.On top of this the crops require special care and nurturing conditions for a fruitful harvest. Nowadays the number of people who want to work in farms had become very less. This has caused a crisis in rural areas and farmers are not able to grow the adequate amount of crop or grow crops which require a lot of manpower. We have devised a solution for this problem which can not deal with problems stated above but also do it more efficiently.</h4>
+    <h2>About the Bot</h2>
+    <h4>The bot contains a chassis which has an attached plougher and also an attached gantry which has a tool mount arm. The tool mount arm can perform tasks like supplying water,fertilizer and sowing seeds. The tool mount arm also has an attached claw to harvest certain kind of crops and an ultrasonic sensor at the tip to help it to navigate on the field. Soil moisture is traked using the moisture sensor on the arm and the field is irrigated on the basis of that.</h4>
+    <h2>Features</h2>
+    <p><ul>
+			<h3><li>Ploughing</li></h3>
+			<h4><p>Ploughing is one of the most essential task in farming. Keeping this in mind we have added the feature of attachable and de-attachable plougher. The flougher can be fixed at the very starting of the bot and it would plough the field. This has an arrangement of sharp plougher which could be slided into the bot's front. As the bot set to the ploughing mode it would traverse through the field in X axis ploughing it.</p></h4>
+			<h3><li>Seed Sowing</li></h3>
+			<h4><p> As the bot has feature of 3 Dimensional traversal it very easy for the bot to perform the task such as seed sowing or irrigation or fertilizer spraying. The Z axis arm performs these tasks of seed sowing as it has cantainer which is equipped with the feature of dropping down the seed at the precisie position. The feature of precision adds a lot of value to our project as this allows us to save resources(water,seed,fertilizer). The arm has a container which is filled with the seeds. This container when turned it would allow the seeds to drop down. The process of opening the container is performed by the servo motor which is controlled by raspberrypi.</p></h4>
+			<h3><li>Irrigation</li></h3>
+			<h4><p>Now as the field had been ploughed and seed sowing done. We need to water these seeds. The feature of irrigating the field is done by the arm in the bot. The bot is equipped with a water tank which has a water-pump through which water is sprayed to the seeds with precision of amount of water and position.</p></h4>
+			<h3><li>Fertilizer Spraying</li></h3>
+			<h4><p>Since the plants need proper nutrition for there growth the arm also ejects the fertilizer using the same mechanism of water spraying.</p></h4>
+			<h3><li>Moisture Tracking</li></h3>
+			<h4><p>Since water is a crucial the moisture tracking helps us to save it. The soil moisture sensor sends the data to the device about amount of water it has or is required. And as per that water is sprayed or turned off.</p></h4>
+			<h3><li>Data prediction</li></h3>
+
+		</ul></p>
+    <h2>Flowchart</h2>
+    <p style="text-align:center;"><img src="{% static "images/flowchart.jpg" %}" alt="Error, no pic"></p>
+
+
+  {% endblock %}

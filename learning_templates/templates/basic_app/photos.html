@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html"%}
+{% load static %}
+  {% block body_block %}
+    <link rel="stylesheet" href="{% static "css/mystyle.css"%}"/>
+    <h2>Circuit Connection</h2>
+          <img src="{% static "images/ckt.jpg" %}" alt="Error, no pic" height="40%" width="50%">
+        <h2>Simulation Screenshots</h2>
+            <img src="{% static "images/Pictures_COMPLETE.jpg" %}" alt="Error, no pic" height="40%" width="50%">
+    <h2>Isometric View</h2>
+    <img src="{% static "images/sketch type.png" %}" alt="Error, no pic" height="40%" width="50%">
+    <h2>Side View</h2>
+    <img src="{% static "images/side.png" %}" alt="Error, no pic" height="40%" width="50%">
+    <h2>Top View</h2>
+    <img src="{% static "images/top.png" %}" alt="Error, no pic" height="40%" width="50%">
+    <h1> </h1>
+
+
+
+
+
+
+  {% endblock %}

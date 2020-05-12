@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html"%}
+{% load static %}
+  {% block body_block %}
+  <link rel="stylesheet" href="{% static "css/mystyle.css"%}"/>
+  <h1><u>Code of Raspberry Pi</u></h1>
+  <pre id="description">
+  import sys
+        import Rpi.GPIO as GPIO
+        import os
+        import Adafruit_DHT
+        import urllib2
+        import smbus
+        import time
+        from ctypes import c_short
+        DHTpin = 17
+        key="XKYP3AJOMVVTL7C1"
+        GPIO.setmode(GPIO.BCM)
+        def readDHT():
+            humi, temp = Adafruit_DHT.read_retry(Adafruit_DHT.DHT11, DHTpin)
+            return (str(int(humi)), str(int(temp)))
+
+        # main() function
+        def main():
+
+            print 'System Ready...'
+            URL = 'https://api.thingspeak.com/update?api_key=XKYP3AJOMVVTL7C1&field1=0'
+            print "Wait...."
+            while True:
+                (hum1, temp)= readDHT()
+
+                finalURL = URL +"&field1=%s&field2=%s"%(humi, temp)
+                print finalURL
+                s=urllib2.urlopen(finalURL);
+                print humi+ " " + temp + " "
+                s.close()
+                time.sleep(10)
+
+
+  </pre>
+
+  {% endblock %}
